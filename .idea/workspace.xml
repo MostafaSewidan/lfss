@@ -1,196 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca9f8347-f397-4083-a618-482d267208be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mostafasewidan.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ClientActive.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog-8.x.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog-8.x.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MigrateAndSeed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MigrateAndSeed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Notification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Token.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MyHelper/Attachment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MyHelper/Attachment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MyHelper/NotificationHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MyHelper/NotificationHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MyHelper/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MyHelper/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/excel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/installer.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/installer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_15_112405_create_permission_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_15_112405_create_permission_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_15_121009_create_permission_tables.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/sass/_variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/sass/_variables.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/sass/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_animated.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_bordered-pulled.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_fixed-width.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_larger.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_path.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_rotated-flipped.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_screen-reader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_stacked.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/font-awesome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/img/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/img/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/img/favicon/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/img/favicon/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/img/favicon/favicon-96x96.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-96x96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/installer/img/pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/installer/img/pattern.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/de/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/de/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/es/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/et/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/et/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fa/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fr/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fr/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/gr/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/gr/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/id/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/id/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/it/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/it/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/nl/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/nl/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pl/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pl/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pt-br/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pt-br/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pt/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pt/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ro/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ro/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/th/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/th/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/tr/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/tr/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/zh-CN/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh-CN/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/zh-TW/installer_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh-TW/installer_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/environment-classic.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment-classic.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/environment-wizard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment-wizard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/environment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/finished.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/finished.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master-update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master-update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/requirements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/requirements.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/update/finished.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/finished.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/update/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/overview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/update/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/installer/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/installer/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-    </list>
+    <list default="true" id="ca9f8347-f397-4083-a618-482d267208be" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +48,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_20_171604_create_cities_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="40">
               <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
             </state>
           </provider>
@@ -270,6 +81,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -552,17 +368,17 @@
       <workItem from="1619905397565" duration="4104000" />
       <workItem from="1621464174241" duration="2062000" />
       <workItem from="1621633838373" duration="650000" />
-      <workItem from="1621709218300" duration="1419000" />
+      <workItem from="1621709218300" duration="2015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49114000" />
+    <option name="totallyTimeSpent" value="49710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1009" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2171825" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2171825" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -576,7 +392,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7846333" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.7846333" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -986,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_20_171604_create_cities_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="40">
           <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
