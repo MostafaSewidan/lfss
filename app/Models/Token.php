@@ -24,14 +24,8 @@ class Token extends Model
 
         switch ($relation)
         {
-            case 'agents':
-                $type = 'App\Models\Agent';
-                break;
-            case 'visitors':
-                $type = 'App\Models\Visitor';
-                break;
-            case 'workers':
-                $type = 'App\Models\Worker';
+            case 'clients':
+                $type = 'App\Models\Client';
                 break;
         }
 

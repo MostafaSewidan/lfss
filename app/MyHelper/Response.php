@@ -33,7 +33,7 @@ class Response
         echo $this->responseTo;
     }
 
-    static function responseJson($status, $message, $data = null, $newAttr = [])
+    static function responseJson($status, $message, $data = null)
     {
         $response =
             [

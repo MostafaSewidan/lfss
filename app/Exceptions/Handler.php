@@ -46,7 +46,7 @@ class Handler extends ExceptionHandler
     {
         $guard = \Arr::get($exception->guards(), 0);
 
-        if ($request->expectsJson() || in_array($guard , [])) {
+        if ($request->expectsJson() || in_array($guard , ['client'])) {
             return Helper::responseJson(0 ,'Un Authenticated');
         }
 

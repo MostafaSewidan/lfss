@@ -99,7 +99,7 @@ class Attachment
             );
 
             return;
-        }else{
+        } else {
 
             $imageResize = self::resizePhoto($extension, $destinationPath, $file, $size, $quality);
 
@@ -118,77 +118,27 @@ class Attachment
      * @param $oldFiles
      * @param $model
      * @param $folder_name
-     * @param array $options
      */
-    static function updateAttachment($file, $oldFiles, $model, $folder_name, array $options = [])
+    static function updateAttachment($file, $oldFiles, $model, $folder_name)
     {
-        //ser options
-        // relation
-        //usage
-        //type
-        //size
-
-        $relation = self::inArray('relation', $options, 'attachmentRelation');
-        $save = self::inArray('save', $options, 'original');
-        $usage = self::inArray('usage', $options, null);
-        $type = self::inArray('type', $options, 'image');
-        $size = self::inArray('size', $options, 400);
-        $quality = self::inArray('quality', $options, 100);
-        $folder_name = $folder_name . '/' . Carbon::now()->toDateString();
-
-        ///////////////////////////////
 
         if ($oldFiles) {
-            File::delete(public_path() . '/' . $oldFiles->path);
+            File::delete(public_path() . '/' . $oldFiles);
         }
 
-        $image = $file;
         $destinationPath = public_path() . '/uploads/thumbnails/' . $folder_name . '/';
         $extension = $file->getClientOriginalExtension(); // getting image extension
         if (!file_exists($destinationPath)) {
             mkdir($destinationPath, 0755);
         }
 
-        if ($extension == 'svg' || $save == 'original' || $type != 'image') {
+        $name = $file->getFilename() . '.' . $extension; // renaming image
+        $file->move($destinationPath, $name); // uploading file to given
 
-            $name = $file->getFilename() . '.' . $extension; // renaming image
-            $file->move($destinationPath, $name); // uploading file to given
+        $model->photo = 'uploads/thumbnails/' . $folder_name . '/' . $name;
+        $model->save();
 
-            $input =
-                [
-                    'path' => 'uploads/thumbnails/' . $folder_name . '/' . $name,
-                    'type' => $type,
-                    'usage' => $usage
-                ];
-
-
-            if ($oldFiles) {
-                $model->$relation()->where(['type' => $type])->update($input);
-            } else {
-
-                $model->$relation()->create($input);
-            }
-
-            return;
-        }
-
-        $imageResize = self::resizePhoto($extension, $destinationPath, $file, $size);
-
-        $input =
-            [
-                'path' => 'uploads/thumbnails/' . $folder_name . '/' . $imageResize,
-                'type' => $type,
-                'usage' => $usage,
-            ];
-
-        if ($oldFiles) {
-
-            $oldFiles->update($input);
-
-        } else {
-
-            $model->$relation()->create($input);
-        }
+        return;
     }
 
     /**
@@ -209,7 +159,7 @@ class Attachment
             }
             return true;
         } else {
-            if($photos)
+            if ($photos)
                 File::delete(public_path() . '/' . $photos->path);
         }
 
@@ -242,7 +192,7 @@ class Attachment
      * @param $model
      * @param array $options
      */
-    public static function setQrCode($code,$model,array $options = [])
+    public static function setQrCode($code, $model, array $options = [])
     {
         $relation = self::inArray('relation', $options, 'attachmentRelation');
         $usage = self::inArray('usage', $options, 'qr-code');
