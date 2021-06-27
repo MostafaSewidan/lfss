@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
+Route::post('category/add', 'MainController@addCat');
+Route::post('category/delete', 'MainController@deleteCat');
+
 Route::get('categories', 'MainController@list_categories');
 Route::get('governorates', 'MainController@list_governorates');
 Route::get('cities', 'MainController@list_cities');

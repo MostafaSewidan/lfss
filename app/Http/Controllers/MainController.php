@@ -278,5 +278,44 @@ class MainController extends Controller
     }
 
     ///////// ///////////// /////////////////////////
+    ///
+
+    public function addCat(Request $request)
+    {
+        $rules =
+            [
+                'name' => 'required'
+            ];
+
+        $data = validator()->make($request->all(), $rules);
+
+        if ($data->fails()) {
+            return $this->responseJson(0, $data->errors()->first());
+        }
+
+        Category::create($request->all());
+
+        return $this->responseJson(1, 'تم الإضافة');
+    }
+
+    public function deleteCat(Request $request)
+    {
+        $rules =
+            [
+                'category_id' => 'required'
+            ];
+
+        $data = validator()->make($request->all(), $rules);
+
+        if ($data->fails()) {
+            return $this->responseJson(0, $data->errors()->first());
+        }
+
+        $cat = Category::find($request->category_id);
+        $cat->losts()->delete();
+        $cat->delete();
+
+        return $this->responseJson(1, 'تم الحذف');
+    }
 
 }
