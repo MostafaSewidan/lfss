@@ -75,42 +75,21 @@ class Attachment
         $type = self::inArray('type', $options, 'image');
         $size = self::inArray('size', $options, 400);
         $quality = self::inArray('quality', $options, 100);
-        $folder_name = $folder_name . '/' . Carbon::now()->toDateString();
 
         ///////////////////////////////
-
         $destinationPath = public_path() . '/uploads/thumbnails/' . $folder_name . '/';
         $extension = $file->getClientOriginalExtension(); // getting image extension
+        $name = $file->getFilename() . '.' . $extension; // renaming image
+        $file->move($destinationPath, $name); // uploading file to given
+        $model->$relation()->create(
+            [
+                'path' => 'uploads/thumbnails/' . $folder_name . '/' . $name,
+                'type' => $type,
+                'usage' => $usage
+            ]
+        );
 
-        if (!file_exists($destinationPath)) {
-            mkdir($destinationPath, 0755);
-        }
-
-        if ($extension == 'svg' || $save == 'original' || $type != 'image') {
-
-            $name = $file->getFilename() . '.' . $extension; // renaming image
-            $file->move($destinationPath, $name); // uploading file to given
-            $model->$relation()->create(
-                [
-                    'path' => 'uploads/thumbnails/' . $folder_name . '/' . $name,
-                    'type' => $type,
-                    'usage' => $usage
-                ]
-            );
-
-            return;
-        } else {
-
-            $imageResize = self::resizePhoto($extension, $destinationPath, $file, $size, $quality);
-
-            $model->$relation()->create(
-                [
-                    'path' => 'uploads/thumbnails/' . $folder_name . '/' . $imageResize,
-                    'type' => $type,
-                    'usage' => $usage
-                ]
-            );
-        }
+        return;
     }
 
     /**

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\addResource;
+use App\Http\Resources\HomeResource;
+use App\Http\Resources\LiteAddResource;
 use App\Models\City;
 use App\Models\Governorate;
 use App\Models\Lost;
@@ -13,72 +16,116 @@ class MainController extends Controller
     public function responseJson($status, $message, $data = null)
     {
         $response = [
-                'status' => $status,
-                'massage' => $message,
-                'data' => $data,
-            ];
+            'status' => $status,
+            'massage' => $message,
+            'data' => $data,
+        ];
 
         return response()->json($response);
     }
 
-    public function list_categories(){
+    public function list_categories()
+    {
 
-        $categories = Category::paginate(10);
+        $categories = Category::get();
 
-        return $this->responseJson(1,'تم التحميل', $categories);
+        return $this->responseJson(1, 'تم التحميل', $categories);
     }
 
-    public function list_governorates(){
+    public function home()
+    {
+
+        $categories = Category::get();
+
+        return $this->responseJson(1, 'تم التحميل', HomeResource::collection($categories));
+    }
+
+    public function list_governorates()
+    {
 
         $goveronrates = Governorate::all();
 
-        return $this->responseJson(1,'تم التحميل' , $goveronrates);
+        return $this->responseJson(1, 'تم التحميل', $goveronrates);
     }
 
-    public function list_cities(Request $request){
+    public function list_cities(Request $request)
+    {
 
-        if($request->gov_id)
-        {
-            $cities = City::where('governorate_id','=',$request->gov_id)->get();
+        $cities = City::where(function ($q) use ($request) {
+            if ($request->gov_id)
+                $q->where('governorate_id', '=', $request->gov_id);
 
-            return $this->responseJson(1,'تم التحميل' , $cities);
+        })->get();
 
-        }else{
-            return $this->responseJson(0,'gov_id required');
-        }
+        return $this->responseJson(1, 'تم التحميل', $cities);
+
     }
 
     ////////////////////////////////////////
     /// lost things
 
-    public function listLosts(Request $request){
+    public function listLosts(Request $request)
+    {
 
-        $records = Lost::where(function ($q) use ($request){
+        $records = Lost::where(function ($q) use ($request) {
 
-            if($request->category_id) {
-                $q->where('category_id' , $request->category_id);
+            if ($request->category_id) {
+                $q->where('category_id', $request->category_id);
             }
 
-        })->latest()->paginate(10);
+            if ($request->city_id) {
+                $q->where('city_id', $request->city_id);
+            }
 
-        return $this->responseJson(1,'تم التحميل' , $records);
+            if ($request->type && in_array($request->type, ['lost', 'found'])) {
+                $q->where('type', $request->type);
+            }
+
+            if ($request->search_key) {
+                $q->where('name', 'Like', '%' . $request->search_key . '%');
+                $q->orWhere('description', 'Like', '%' . $request->search_key . '%');
+            }
+
+        })->latest()->get();
+
+        return $this->responseJson(1, 'تم التحميل', LiteAddResource::collection($records));
     }
 
-    public function myAds(Request $request){
+    public function showLosts(Request $request)
+    {
+
+        $records = Lost::where(function ($q) use ($request) {
+
+            if ($request->id) {
+                $q->where('id', $request->id);
+            }
+
+        })->first();
+
+
+        if ($records)
+            return $this->responseJson(1, 'تم التحميل', new addResource($records));
+        else
+            return $this->responseJson(1, 'تم التحميل', []);
+    }
+
+    public function myAds(Request $request)
+    {
 
         $user = $request->user();
-        $records = $user->losts()->where(function ($q) use ($request){
+        $records = $user->losts()->where(function ($q) use ($request) {
 
-            if($request->category_id) {
-                $q->where('category_id' , $request->category_id);
+            if ($request->category_id) {
+                $q->where('category_id', $request->category_id);
             }
 
-        })->latest()->paginate(10);
+        })->latest()->get();
 
-        return $this->responseJson(1,'تم التحميل' , $records);
+        return $this->responseJson(1, 'تم التحميل', LiteAddResource::collection($records));
     }
 
-    public function adsAddNew(Request $request){
+    public function adsAddNew(Request $request)
+    {
 
         $user = $request->user('client');
 
@@ -88,7 +135,8 @@ class MainController extends Controller
                 'category_id' => 'required|exists:categories,id',
                 'type' => 'required|in:lost,found',
                 'name' => 'required',
-                'photo' => 'required|image|mimes:jpeg,jpg,png,gif',
+                'photos' => 'required|array',
+                'photos.*' => 'required|image|mimes:jpeg,jpg,png,gif',
             ];
 
         $validator = validator()->make($request->all(), $rules);
@@ -100,17 +148,17 @@ class MainController extends Controller
 
         $record = $user->losts()->create($request->all());
 
-        if ($request->hasFile('photo')) {
-            \Helper\Attachment::updateAttachment(
-                $request->file('photo'),
-                $record->photo,
-                $record,
-                'losts');
+        if ($request->photos) {
+            foreach ($request->photos as $photo) {
+
+                \Helper\Attachment::addAttachment(
+                    $photo,
+                    $record,
+                    'losts');
+            }
         }
-        return $this->responseJson(1,'تم الإضافة بنجاح');
+        return $this->responseJson(1, 'تم الإضافة بنجاح');
     }
-
-
 
 
     ///////// Notifications //////////////////////////
@@ -125,9 +173,9 @@ class MainController extends Controller
                 $q->where('notification_id', $request->notification_id);
             }
 
-        })->latest()->paginate(20);
+        })->latest()->get();
 
-        return $this->responseJson(1,'تم التحميل' , $records);
+        return $this->responseJson(1, 'تم التحميل', $records);
     }
 
     public function deleteNotification(Request $request)
@@ -187,7 +235,7 @@ class MainController extends Controller
     {
         $user = $request->user('client');
 
-        $notificationCount = $user->notifications()->where('is_read' , 0)->count();
+        $notificationCount = $user->notifications()->where('is_read', 0)->count();
 
         return $this->responseJson(1, 'تم التحميل', ['count' => $notificationCount]);
     }

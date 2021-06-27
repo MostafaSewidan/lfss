@@ -40,11 +40,13 @@ class AuthController extends Controller
     }
 
     /**
-     * @return string
+     * @param $expired_date
+     * @return bool
      */
     public function checkPinCodeExpiredDate($expired_date)
     {
-        $check = Carbon::now() > $expired_date ? false : true;
+        //       12:02   < 12:05
+        $check = Carbon::now() < $expired_date ? true : false;
         return $check;
     }
 
@@ -146,15 +148,14 @@ class AuthController extends Controller
     }
 
 
-    public function sendPinCode(Request $request , $model = null)
+    public function sendPinCode(Request $request , $client = null)
     {
-        if (!$model) {
+        if (!$client) {
 
             $rules =
                 [
                     'phone' => 'required|exists:clients,phone',
                 ];
-
 
             $data = validator()->make($request->all(), $rules);
 
@@ -163,20 +164,20 @@ class AuthController extends Controller
                 return $this->responseJson(0, $data->errors()->first(), $data->errors());
             }
 
-            $model = Client::where(['phone' => $request->phone])->first();
+            $client = Client::where(['phone' => $request->phone])->first();
 
-            if (!$model)
+            if (!$client)
                 return $this->responseJson(0, 'رقم الهاتف غير صحيح');
 
         }
 
         $pin_code = $this->getPinCode();
-        $model->pin_code = $pin_code;
+        $client->pin_code = $pin_code;
 
-//        Mail::to($model->email)->send(new SendPinCode($model));
+//        Mail::to($client->email)->send(new SendPinCode($client));
 
-        $model->pin_code_date_expired = $this->getPinCodeExpiredDate();
-        $model->save();
+        $client->pin_code_date_expired = $this->getPinCodeExpiredDate();
+        $client->save();
 
         return $this->responseJson(1, 'تم إرسال الكود بنجاح');
     }

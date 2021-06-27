@@ -7,7 +7,10 @@ Route::get('categories', 'MainController@list_categories');
 Route::get('governorates', 'MainController@list_governorates');
 Route::get('cities', 'MainController@list_cities');
 Route::get('losts', 'MainController@listLosts');
+Route::get('home', 'MainController@home');
+Route::get('show-losts', 'MainController@showLosts');
 
+Route::post('register' , 'AuthForTestController@register');
 //auth cycle
 Route::post('register', 'AuthController@register');
 Route::post('login', 'AuthController@login');
