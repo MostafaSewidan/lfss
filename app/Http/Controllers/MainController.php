@@ -6,8 +6,10 @@ use App\Http\Resources\addResource;
 use App\Http\Resources\HomeResource;
 use App\Http\Resources\LiteAddResource;
 use App\Models\City;
+use App\Models\Client;
 use App\Models\Governorate;
 use App\Models\Lost;
+use Helper\NotificationHelper;
 use Illuminate\Http\Request;
 use App\Models\Category;
 
@@ -15,6 +17,24 @@ class MainController extends Controller
 {
     public function responseJson($status, $message, $data = null)
     {
+        switch ($message){
+            case 'تم التحميل':
+                $message = __('api.response.data_loaded');
+                break;
+            case 'تم الإضافة بنجاح':
+                $message = __('api.response.data_added_successful');
+                break;
+            case 'تعذر الحصول علي البيانات':
+                $message = __('api.response.data_not_found');
+                break;
+            case 'تم الحذف بنجاح':
+                $message = __('api.response.data_deleted_successful');
+                break;
+            case 'تم القراءه بنجاح':
+                $message = __('api.response.data_read_successful');
+                break;
+        }
+
         $response = [
             'status' => $status,
             'massage' => $message,
@@ -157,6 +177,15 @@ class MainController extends Controller
                     'losts');
             }
         }
+        $clients = Client::where('city_id' , $request->city_id)->pluck('id')->toArray();
+
+        $title = $clients->name .
+            __('api.notification.ad.title');
+        $body = $clients->name .
+            __('api.notification.ad.'.$request->type).
+            $record->name;
+        NotificationHelper::sendNotification($record,$clients,'clients',$title,$body,'ad',new LiteAddResource($record));
+
         return $this->responseJson(1, 'تم الإضافة بنجاح');
     }
 
@@ -166,7 +195,8 @@ class MainController extends Controller
 
     public function notifications(Request $request)
     {
-        $records = $request->user('client')->notifications()->where(function ($q) use ($request) {
+        $user = $request->user('client');
+        $records = $user->notifications()->where(function ($q) use ($request) {
 
             if ($request->notification_id) {
 
@@ -174,6 +204,13 @@ class MainController extends Controller
             }
 
         })->latest()->get();
+
+        foreach ($records as $record) {
+
+            $notification = $user->notifications()->find($record->id);
+
+            $notification->clients()->updateExistingPivot($user->id, ['is_read' => 1]);
+        }
 
         return $this->responseJson(1, 'تم التحميل', $records);
     }

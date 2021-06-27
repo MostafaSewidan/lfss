@@ -9,9 +9,10 @@ class City extends Model
 
     protected $table = 'cities';
     public $timestamps = true;
-    protected $fillable = array('governorate_id', 'name');
-    protected $hidden = array('governorate_id', 'created_at', 'updated_at');
+    protected $fillable = array('governorate_id', 'city_name_ar','city_name_en');
+    protected $hidden = array('governorate_id', 'created_at', 'updated_at','city_name_ar','city_name_en');
     protected $with = array('governorate');
+    protected $appends = array('name');
 
     public function clients()
     {
@@ -26,6 +27,12 @@ class City extends Model
     public function governorate()
     {
         return $this->belongsTo('App\Models\Governorate');
+    }
+
+
+    public function getNameAttribute()
+    {
+        return $this['city_name_'.app()->getLocale()];
     }
 
 }

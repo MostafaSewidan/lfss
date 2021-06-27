@@ -13,6 +13,41 @@ class AuthController extends Controller
 {
     public function responseJson($status, $message, $data = null)
     {
+        switch ($message){
+            case 'تم التسجيل بنجاح':
+                $message = __('api.response.success_login');
+                break;
+            case 'الرجاء تأكيد الحساب أولا':
+                $message = __('api.response.please_active_your_account');
+                break;
+            case 'رقم الهاتف غير صحيح':
+                $message = __('api.response.phone_number_is_wrong');
+                break;
+            case 'تم إرسال الكود بنجاح':
+                $message = __('api.response.pin_code_is_send');
+                break;
+            case 'تم تأكيد الحساب بالفعل':
+                $message = __('api.response.account_activated_successful');
+                break;
+            case 'انتهت صلاحيه كود التفعيل':
+                $message = __('api.response.pin_code_is_expired');
+                break;
+            case 'كود التفعيل خطأ':
+                $message = __('api.response.pin_code_is_wrong');
+                break;
+            case 'تم التحديث بنجاح':
+                $message = __('api.response.update_successful');
+                break;
+            case 'كلمة المرور القديمه خاطئه':
+                $message = __('api.response.old_password_is_wrong');
+                break;
+            case 'تم التحميل':
+                $message = __('api.response.data_loaded');
+                break;
+            case 'تمت العمليه':
+                $message = __('api.response.success');
+                break;
+        }
         $response = [
                 'status' => $status,
                 'massage' => $message,
