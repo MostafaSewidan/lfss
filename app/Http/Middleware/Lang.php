@@ -17,7 +17,11 @@ class Lang
      */
     public function handle($request, Closure $next)
     {
-        dd($request);
+        if(in_array($request->header('Accept-Language') , ['en','ar']))
+            app()->setLocale($request->header('Accept-Language'));
+        else
+            app()->setLocale('en');
+
         return $next($request);
 
     }
