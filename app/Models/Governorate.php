@@ -9,8 +9,8 @@ class Governorate extends Model
 
     protected $table = 'governorates';
     public $timestamps = true;
-    protected $fillable = array('governorate_name_ar','governorate_name_ar');
-    protected $hidden = array('created_at', 'updated_at','governorate_name_ar','governorate_name_ar');
+    protected $fillable = array('governorate_name_ar','governorate_name_en');
+    protected $hidden = array('created_at', 'updated_at','governorate_name_en','governorate_name_ar');
     protected $appends = array('name');
 
     public function cities()
@@ -21,7 +21,6 @@ class Governorate extends Model
     public function getNameAttribute()
     {
         return $this['governorate_name_'.app()->getLocale()];
-
     }
 
 }
